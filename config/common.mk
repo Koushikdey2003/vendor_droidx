@@ -251,8 +251,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RoundQSOverlay
 
-#BCR
+# BCR
 $(call inherit-product, vendor/bcr/bcr.mk)
+
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
 
 include vendor/droidx/config/version.mk
 include vendor/droidx/config/bootanimation.mk
